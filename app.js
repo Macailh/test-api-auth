@@ -1,7 +1,13 @@
 const express = require("express");
 const { checkApiKey } = require("./middlewares/auth.handler");
+const authRouter = require("./routers/auth.router");
+
+require("./utils/auth");
 
 const app = express();
+app.use(express.json());
+
+app.use("/auth", authRouter);
 
 app.get("/", (req, res) => {
   res.send("¡Hola, mundo!");
