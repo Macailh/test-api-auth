@@ -1,7 +1,8 @@
 require("dotenv").config();
 
 const config = {
-  APIKEY: process.env.API_KEY,
+  API_KEY: process.env.API_KEY,
+  JWT_SECRET: process.env.JWT_SECRET,
 };
 
 module.exports = { config };
