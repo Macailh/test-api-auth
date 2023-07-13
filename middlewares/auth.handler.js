@@ -3,7 +3,7 @@ const { config } = require("./../config/config");
 
 function checkApiKey(req, res, next) {
   const apiKey = req.headers["api"];
-  if (apiKey === config.APIKEY) {
+  if (apiKey === config.API_KEY) {
     next();
   } else {
     const error = boom.unauthorized("API Key inválida");
